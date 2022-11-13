@@ -45,7 +45,7 @@ const square = (number) =>{
 console.log(square(numbers));
 */
 
-sentence = 'Hello bro. How you doin. Happy Birthday';
+sentence = 'Hello bro. How you doin, bro. Happy Birthday Bro.';
 
 // ********** COUNTING FUNCTION COUNTS THE NUMBER OF LETTER IN THE SENTENCE THAT IS PASSED AS AN ARGUMENT AN RETURN THE COUNT (NUMBER) including spaces  **********
 /*
@@ -75,3 +75,37 @@ const letterCountNoSpace = (sentence) => {
 
 console.log(letterCountNoSpace(sentence));
 */
+
+
+//******* COUNTING FUNCTION LETTERS AND WORDS  *******
+/*
+const letterFreq = (phrase) => {
+     const letters = {};
+     
+     for(const letter of phrase){
+        if (letter in letters)
+            letters[letter]++;
+        else letters[letter] = 1; 
+     }
+
+     return letters;
+}
+
+console.log(letterFreq(sentence));
+
+
+const wordFreq = (phrase) => {
+    let frequency = {}
+    phrase = phrase.toLowerCase().split(' ');
+    for(const word of phrase){
+        if (word in frequency)
+            frequency[word]++;
+        else frequency[word] = 1;
+    } 
+    
+    return frequency;
+}
+
+console.log(wordFreq(sentence));
+*/
+
