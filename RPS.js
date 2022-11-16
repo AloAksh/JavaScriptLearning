@@ -10,7 +10,7 @@ for (const inp of inputs) {
 let Score = document.getElementById('score');
 let currScore = Score.innerText;
 scoreNumber = Number(currScore.slice(7));
-//score.innerHTML =  `<h2>Score: ${currScore}</h2>`;
+
 
 //the message to be displayed
 let msg = document.getElementById('sentence');
@@ -30,10 +30,15 @@ calc = () => {
             if ((input.id == "rock" && compInput == "scissors") || (input.id == "scissors" && compInput == "paper") || (input.id == "paper" && compInput == "rock")){
                 scoreNumber += 1;
                 console.log(scoreNumber);
-                msg.innerHTML = "<h2>You Won </h2>";
+                msg.innerHTML = `<h2>You Won !!!</h2><h4>| You:  ${input.id} |   Comp:  ${compInput} |</h4>`;
                 Score.innerHTML = `<h2>Score: ${scoreNumber}</h2>`;
             }
-            else msg.innerHTML = "<h2>You Lost </h2>";
+            else if(input.id == compInput){
+                msg.innerHTML = `<h2>Its a tie!</h2><h4>| You:  ${input.id}   | Comp:  ${compInput} |</h4>`;
+            }
+            else {
+                msg.innerHTML = `<h2>You lost :(</h2><h4>| You: ${input.id}  |  Comp:  ${compInput} |</h4>`;
+            }
         } 
     });
 }
